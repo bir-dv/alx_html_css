@@ -21,10 +21,8 @@ This project involves creating a fully functional web page from scratch using on
 project-directory/
 ├── index.html       # Main HTML file
 ├── css/
-│   └── styles.css   # Custom CSS file
-├── assets/
-│   ├── images/      # Folder for images
-│   └── fonts/       # Folder for custom fonts
+│   └── 0-styles.css   # Custom CSS file
+├── images/
 └── README.md        # Project documentation
 ```
 

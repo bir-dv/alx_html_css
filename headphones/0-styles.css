@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-size: border-box;
+}
+
+body {
+   
+    font-family: Source sans Pro;
+    box-sizing: border-box;
+    /* margin: 20px; */
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  
+  }
+
+  nav {
+    background: transparent; /* Remove any background */
+    position: absolute; /* Position navbar over the hero section */
+    top: 0; /* Align it at the top */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+    .hero {
+    height: 100vh;
+    background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 100vh;
+    align: center;
+  }
+
+  .hero .heroparagraph {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 100vh;
+    align: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul li {
+    margin-left: 1.5rem;
+  }
+
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  ul li a:hover {
+    color: #FF6565;
+  }
+
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+  }
+
+  /* Basic button styling */
+.my-button {
+    background-color: #FF6565; /* Green background */
+    color: white; /* White text */
+    margin-top: 1rem;
+    padding: 10px 35px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  /* Button hover effect */
+  .my-button:hover {
+    opacity: 0.9;
+     /* Darker green on hover */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    ul.active {
+      display: flex;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+    .my-button {
+        padding: 10px 20px; /* Smaller padding for small screens */
+        font-size: 12px; /* Further reduce button font size */
+      }
+
+      .hero .heroparagraph {
+        padding: 10px 20px; /* Smaller padding for small screens */
+        font-size: 12px; /* Further reduce button font size */
+      }
+  }
+
