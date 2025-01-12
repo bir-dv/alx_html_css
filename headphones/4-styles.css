@@ -1,0 +1,410 @@
+@font-face {
+    font-family: 'Source Sans Pro'; 
+    src: url(/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-size: border-box;
+}
+:root {
+    --color-white: #fff;
+    --color-red: #FF6565;
+    --font-small: 12px;
+    --font-medium: 16px;
+    --font-large: 32px;
+    --font: 'Source Sans Pro', 'Lato', sans-serif;
+}
+
+body {
+   
+    font-family: Source sans Pro;
+    box-sizing: border-box;
+    /* margin: 20px; */
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  
+  }
+
+  nav {
+    background: transparent; /* Remove any background */
+    position: absolute; /* Position navbar over the hero section */
+    top: 0; /* Align it at the top */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+    .hero {
+    height: 100vh;
+    background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 100vh;
+    align: center;
+  }
+
+  .hero .heroparagraph {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 100vh;
+    align: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul li {
+    margin-left: 1.5rem;
+  }
+
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  ul li a:hover {
+    color: #FF6565;
+  }
+
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+  }
+
+  /* Basic button styling */
+.my-button {
+    background-color: #FF6565; /* Green background */
+    color: white; /* White text */
+    margin-top: 1rem;
+    padding: 10px 35px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  /* Button hover effect */
+  .my-button:hover {
+    opacity: 0.9;
+     /* Darker green on hover */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    ul.active {
+      display: flex;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+    .my-button {
+        padding: 10px 20px; /* Smaller padding for small screens */
+        font-size: 12px; /* Further reduce button font size */
+      }
+
+      .hero .heroparagraph {
+        padding: 10px 20px; /* Smaller padding for small screens */
+        font-size: 12px; /* Further reduce button font size */
+      }
+  }
+
+
+
+/** Main Section - Style Sheet 1-index - What we do **/
+main {
+    width: 100%;
+    position: relative;
+}
+
+main p {
+    text-align: center;
+    width: 65%;
+    margin: 2rem auto;
+    line-height: 1.5;
+    font-size: var(--font-medium);
+    font-family: var(--font);
+}
+
+main .container {
+    padding: 4rem;
+    flex-wrap: wrap;
+}
+
+main .grid {
+    width: 100%;
+    display: grid;
+    font-family: var(--font);
+    margin: 2rem auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    text-align: center;
+}
+
+main .grid .element {
+    margin: 0.5rem;
+}
+
+main .grid .element p {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    padding: 0.5rem;
+}
+
+main .grid .element h2 {
+    font-family: var(--font);
+    font-size: var(--font-medium);
+    padding: 0.5rem;
+   
+}
+
+/** icons styles **/
+
+.holberton_school-icon-ic_sound, 
+.holberton_school-icon-ic_video, 
+.holberton_school-icon-ic_music, 
+.holberton_school-icon-ic_hearing {
+    color: var(--color-red);
+    font-size: 46px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-family: var(--font);
+    font-size: var(--font-large);
+    font-weight: bold;
+}
+
+/** media queries Styles on Main */
+
+ 
+@media (max-width: 480px) {
+    main .container {
+        padding: 4rem 2.5rem;
+      }
+
+      main p {
+        width: 100%;
+      }
+
+      main .grid {
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+      }
+
+      main .grid .element p {
+        width: 70%;
+        margin: auto;
+      }
+}
+
+
+/** Main Section - Style Sheet 2-index - Results **/
+#results {
+    color: var(--color-white);
+    background-image: url(./images/headphones_hero_2.jpg);
+    /* background: url('./images/headphones_hero_2.jpg') no-repeat center center/cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#results .container {
+    padding: 6rem 4rem;
+}
+
+#results .grid .element {
+    height: 10rem;
+    padding: 0;
+    position: relative;
+    background-image: url(./images/pentagone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#results .grid .element h2 {
+    position: relative;
+    top: 30%;
+    font-size: var(--font-large);
+}
+
+#results .grid .element p {
+    position: relative;
+    top: 30%;
+}
+
+/** Media Queries**/
+
+@media (max-width: 480px) {
+    #results {
+      background-position: 50%;
+    }
+}
+
+/** Main Section - Style Sheet 3-index - Contact us **/
+
+#formContact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+input {
+    width: 50%;
+    margin: 1rem 0;
+    height: 2rem;
+    color: black;
+    font-family: var(--font);
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(7, 22, 41, 0.17);
+}
+
+input::placeholder {
+    color: black;
+    font-size: var(--font-medium);
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+/** Media queries **/
+@media (max-width: 480px) {
+    input {
+      width: 90%;
+    }
+}
+
+/** Footer Section - Style Sheet 4-index - footer **/
+footer {
+    background: #071629;
+    color: var(--color-white);
+}
+
+footer nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container {
+    padding: 4rem 4rem 3rem 4rem;
+    flex-wrap: wrap;
+}
+
+footer p {
+    font-size: var(--font-small);
+    font-family: var(--font);
+    margin: 3rem auto 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.35;
+}
+
+.footer-nav {
+    display: inline-flex;
+    margin: auto 0;
+    padding: 0;
+    font-weight: bolder;
+    font-family: var(--font);
+    list-style-type: none;
+    font-size: var(--font-large);
+}
+
+.footer-nav li {
+    margin: 0 0.5rem;
+}
+
+/** media queries **/
+  
+@media (max-width: 480px) {
+    footer .container {
+        padding: 3rem 4rem;
+      }
+
+      footer nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-nav {
+        margin: 3rem auto;
+    }
+
+    footer .logo {
+        max-width: 50%;
+    }
+
+    footer p {
+        margin: 0 auto;
+    }
+}
